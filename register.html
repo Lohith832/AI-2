@@ -1,0 +1,26 @@
+{% load static %}
+<!-- templates/register.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register | AI Exam Proctoring System</title>
+    <link rel="stylesheet" href="{% static 'css/register.css' %}">
+</head>
+<body>
+    <div class="register-container">
+        <h2>Create Account</h2>
+        <form method="POST" action="{% url 'register' %}">
+            {% csrf_token %}
+            <input type="text" name="username" id="username" placeholder="Username" required>
+            <input type="email" name="email" id="email" placeholder="Email" required>
+            <input type="password" name="password1" id="password1" placeholder="Password" required>
+            <input type="password" name="password2" id="password2" placeholder="Confirm Password" required>
+            <button type="submit">Register</button>
+        </form>
+        <p id="errorMsg"></p>
+    </div>
+
+    <script src="{% static 'js/register.js' %}"></script>
+</body>
+</html>

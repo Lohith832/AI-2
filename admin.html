@@ -1,0 +1,39 @@
+{% load static %}
+<!-- templates/admin.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Dashboard | AI Exam Proctoring</title>
+    <link rel="stylesheet" href="{% static 'css/admin.css' %}">
+</head>
+<body>
+    <header>
+        <h1>Admin Dashboard</h1>
+        <nav>
+            <ul>
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="{% url 'login' %}"></a></li>
+                <li><a href="{% url 'logout' %}">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="admin-section">
+            <h2>Welcome, {{ user.username }}</h2>
+            <p>Below is a summary of student activity and violation reports.</p>
+
+            <div id="studentList">
+                <!-- Dynamic student data will be loaded here -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 AI Exam Proctoring System</p>
+    </footer>
+
+    <script src="{% static 'js/admin.js' %}"></script>
+</body>
+</html>

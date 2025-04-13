@@ -1,0 +1,63 @@
+<!-- templates/about_us.html -->
+ {% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>About Us | AI Exam Proctoring</title>
+    <link rel="stylesheet" href="{% static 'css/about_us.css' %}">
+</head>
+<body>
+    <header>
+        <h1>About Our Project</h1>
+        <nav>
+            <ul>
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="{% url 'login' %}">Login</a></li>
+                <li><a href="{% url 'register' %}">Register</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="about-section">
+            <h2>AI-Based Exam Proctoring System</h2>
+            <p>This project uses computer vision and AI to monitor online exams in real-time. It helps prevent cheating by detecting multiple faces, tracking eye movement, and flagging suspicious behavior.</p>
+
+            <h3>Features:</h3>
+            <ul>
+                <li>Real-time webcam monitoring</li>
+                <li>Face detection and recognition</li>
+                <li>Eye movement tracking</li>
+                <li>Violation logging and alerts</li>
+                <li>Admin dashboard for monitoring</li>
+            </ul>
+
+            <h3>Our Team</h3>
+            <div class="team-container">
+                <div class="team-card">
+                    <img src="{% static 'images/member1.jpg' %}" alt="Member 1">
+                    <h4>Ravi Kumar</h4>
+                    <p>Lead Developer</p>
+                </div>
+                <div class="team-card">
+                    <img src="{% static 'images/member2.jpg' %}" alt="Member 2">
+                    <h4>Neha Sharma</h4>
+                    <p>AI Specialist</p>
+                </div>
+                <div class="team-card">
+                    <img src="{% static 'images/member3.jpg' %}" alt="Member 3">
+                    <h4>Arjun Mehta</h4>
+                    <p>Backend Engineer</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 AI Exam Proctoring System</p>
+    </footer>
+
+    <script src="{% static 'js/about_us.js' %}"></script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+{% load static %}
+<!-- templates/student.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Dashboard | AI Exam Proctoring</title>
+    <link rel="stylesheet" href="{% static 'css/student.css' %}">
+</head>
+<body>
+    <header>
+        <h1>Student Dashboard</h1>
+        <nav>
+            <ul>
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="{% url 'exam' %}">Start Exam</a></li>
+                <li><a href="{% url 'logout' %}">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="dashboard">
+            <h2>Welcome, {{ user.username }}</h2>
+            <p>Your upcoming exams and status will be displayed here.</p>
+            <div id="exam-status">
+                <!-- Placeholder for dynamic exam content -->
+            </div>
+            <button id="startExamBtn">Start Exam</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 AI Exam Proctoring System</p>
+    </footer>
+
+    <script src="{% static 'js/student.js' %}"></script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+/* static/css/register.css */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f3faff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.register-container {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 350px;
+}
+
+.register-container h2 {
+    margin-bottom: 20px;
+    color: #0066cc;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+button {
+    background-color: #0066cc;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #004d99;
+}
+
+#errorMsg {
+    color: red;
+    margin-top: 10px;
+}

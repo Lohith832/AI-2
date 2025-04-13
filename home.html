@@ -1,0 +1,38 @@
+{% load static %}
+<!-- templates/home.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AI-Based Exam Proctoring System</title>
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+</head>
+<body>
+    <header>
+        <h1>Welcome to AI-Based Exam Proctoring System</h1>
+        <nav>
+            <ul>
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="{% url 'student_dashboard' %}">Student</a></li>
+                <li><a href="{% url 'admin_dashboard' %}">Admin</a></li>
+                <li><a href="{% url 'about_us' %}">About Us</a></li>
+                <li><a href="{}">Exam</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="intro">
+            <h2>Smart Exam Monitoring with AI</h2>
+            <p>This system uses Computer Vision to monitor students during online exams for fair assessments.</p>
+        </section>
+        <button id="learnMoreBtn">Learn More</button>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 AI Proctoring System</p>
+    </footer>
+
+    <script src="{% static 'js/home.js' %}"></script>
+</body>
+</html>
